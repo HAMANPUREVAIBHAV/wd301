@@ -1,10 +1,11 @@
+import React from "react";
 import TaskCard from "./TaskCard";
 import "./TaskCard.css";
 
 function App() {
   return (
     <>
-      <h1 className="pt-4 px-4 md:px-20 lg:px-40 text-3xl md:text-4xl font-semibold text-gray-600 text-center md:text-left">
+      <h1 className="pt-4 mt-10 px-4 md:px-20 lg:px-40 text-3xl md:text-4xl font-semibold text-gray-600 text-center md:text-left">
         Smarter Tasks
       </h1>
       <p className="pt-4 px-4 md:px-20 lg:px-40 text-center md:text-left">
@@ -13,7 +14,7 @@ function App() {
         </span>{" "}
         Graduation Final Year Project (Revamp College Website)
       </p>
-      <div className="pt-4 px-4 md:px-20 lg:px-40 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="pt-4 px-4 mx-4 md:px-20 lg:px-40 grid grid-cols-1 md:grid-cols-2 gap-60">
         <div className="border-solid border-2 border-gray-500 rounded-lg ">
           <h1 className="text-xl md:text-2xl font-semibold text-gray-600 text-center pt-2">
             Pending
