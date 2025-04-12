@@ -1,17 +1,25 @@
-import React from "react";
 import Task from "./Task";
 import { TaskItem } from "./types";
 
 interface Props {
   tasks: TaskItem[];
+  deleteTask: (index: number) => void;
 }
-interface State {}
-class TaskList extends React.Component<Props, State> {
+
+const TaskList = (props: Props) =>{
+  const list = props.tasks.map((task, idx) => (
+    <li key={idx}>
+    <Task key={idx} 
+    title={task.title}
+    description={task.description}
+    dueDate={task.dueDate}
+    onDelete={() => props.deleteTask(idx)} 
+    
+    />
+    </li>
+  ));
+  return <><ul>{list}</ul></>;
   
-  render() {
-    return this.props.tasks.map((task, idx) => (
-      <Task key={idx} title={task.title} duedate={task.duedate} description={task.description}/>
-    ));
-  }
 }
+
 export default TaskList;
