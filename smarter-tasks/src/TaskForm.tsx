@@ -42,7 +42,9 @@ const  TaskForm = (props: TaskFormProps)=>{
 
     const newTask: TaskItem = {
       id: uuidv4(), // ✅ generate a unique id
-      ...formState,
+      todoTitle: formState.title,
+      todoDueDate: formState.dueDate,
+      todoDescription: formState.description,
     };
     props.addTask(newTask);
     setFormState({ title:"", dueDate:"", description:""});

@@ -11,9 +11,9 @@ const TaskList = (props: Props) =>{
     <li key={idx}>
     <Task key={idx}
     id={task.id} 
-    title={task.title}
-    description={task.description}
-    dueDate={task.dueDate}
+    todoTitle={task.todoTitle}
+    todoDescription={task.todoDescription}
+    todoDueDate={task.todoDueDate}
     onDelete={() => props.deleteTask(idx)} 
     
     />
