@@ -1,6 +1,7 @@
 import "./TaskCard.css";
 
 interface TaskProp {
+  id: string;
   title: string;
   dueDate: string;
   description: string;
@@ -11,7 +12,10 @@ interface TaskProp {
 const Task = (props: TaskProp) =>{
   return (
     <div className="TaskItem shadow-md border border-slate-100">
-      <h2 className="text-base font-bold my-1">{props.title}</h2>
+      <a href={`/tasks/${props.id || ""}`}>
+            <h2 className="text-base font-bold my-1">{props.title}</h2>
+          </a>
+
       <p className="text-sm text-slate-500">
         Due Date: {props.dueDate}
       </p>

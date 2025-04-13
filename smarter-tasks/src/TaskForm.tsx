@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { TaskItem } from "./types";
-import "./index.css"
+import "./index.css";
+import { v4 as uuidv4 } from 'uuid';
 
 interface TaskFormProps {
     addTask: (task: TaskItem) => void;
@@ -33,14 +34,17 @@ const  TaskForm = (props: TaskFormProps)=>{
     setFormState({ ...formState, dueDate: event.target.value});
   }
 
-  const addTask:React.FormEventHandler<HTMLFormElement> = (event) => {
+  const addTask: React.FormEventHandler<HTMLFormElement> = (event) => {
     event.preventDefault();
-    console.log('Submitted the form with');
-    if (formState.title.length === 0 || formState.dueDate.length === 0){
+    if (formState.title.length === 0 || formState.dueDate.length === 0) {
       return;
     }
 
-    props.addTask(formState);
+    const newTask: TaskItem = {
+      id: uuidv4(), // ✅ generate a unique id
+      ...formState,
+    };
+    props.addTask(newTask);
     setFormState({ title:"", dueDate:"", description:""});
 
   }
