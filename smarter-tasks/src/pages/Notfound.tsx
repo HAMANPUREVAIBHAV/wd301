@@ -19,4 +19,6 @@ const Notfound = () => {
 };
 // This component can be used in your router setup to handle 404 errors
 
+
+// import React from "react";
 export default Notfound;
