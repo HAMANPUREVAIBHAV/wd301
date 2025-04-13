@@ -7,7 +7,6 @@ const Layout = () => {
     <>
       <Header />
       <main>
-        {/* We want route specific content to show up in this position */}
         <Outlet />
       </main>
     </>

@@ -10,15 +10,12 @@ const Notfound = () => {
       <button
         id="backToHomeButton"
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800"
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/home")}
       >
         Back to Home
       </button>
     </div>
   );
 };
-// This component can be used in your router setup to handle 404 errors
 
-
-// import React from "react";
 export default Notfound;
