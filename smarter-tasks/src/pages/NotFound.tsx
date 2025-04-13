@@ -17,5 +17,6 @@ const Notfound = () => {
     </div>
   );
 };
+// This component can be used in your router setup to handle 404 errors
 
 export default Notfound;
