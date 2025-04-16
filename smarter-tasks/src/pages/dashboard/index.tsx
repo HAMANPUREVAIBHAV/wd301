@@ -11,7 +11,7 @@ const Dashboard: React.FC = () => {
   const handleLogout = () => {
     localStorage.removeItem('userData'); // clear user data
     // Add any other session cleanup if needed
-    //localStorage.removeItem('authToken'); // clear auth token
+    localStorage.removeItem('authToken'); // clear auth token
     navigate('/signin'); // redirect to signin page
   };
 
@@ -20,13 +20,13 @@ const Dashboard: React.FC = () => {
       <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Dashboard</h1>
       <h2>{userData?.name}</h2>
       <h2>{userData?.email}</h2>
-      <button
+      <a
         id="logout-link"
         onClick={handleLogout}
         className="mt-6 text-blue-500 underline hover:text-blue-700"
       >
         Logout
-      </button>
+      </a>
     </div>
   );
 };
