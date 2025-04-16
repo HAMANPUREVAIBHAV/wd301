@@ -11,7 +11,7 @@ const Dashboard: React.FC = () => {
   const handleLogout = () => {
     localStorage.removeItem('userData'); // clear user data
     // Add any other session cleanup if needed
-    localStorage.removeItem('authToken'); // clear auth token
+    //localStorage.removeItem('authToken'); // clear auth token
     navigate('/signin'); // redirect to signin page
   };
 
