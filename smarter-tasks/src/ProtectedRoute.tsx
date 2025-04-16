@@ -7,6 +7,5 @@ export default function ProtectedRoute({ children }: { children: JSX.Element }) 
   } else {
     return <Navigate to="/signin" />;
  }
-
-
+ 
 }
