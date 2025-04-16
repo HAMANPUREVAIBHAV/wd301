@@ -22,6 +22,7 @@ const Dashboard: React.FC = () => {
       <h2>{userData?.email}</h2>
       <a
         id="logout-link"
+        href='/signin'
         onClick={handleLogout}
         className="mt-6 text-blue-500 underline hover:text-blue-700"
       >
