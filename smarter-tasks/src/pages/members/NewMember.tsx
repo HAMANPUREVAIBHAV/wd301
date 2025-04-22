@@ -11,7 +11,11 @@ type Imputs = {
   password: string;
 };
 
-const NewMember = () =>{
+type NewMemberProps = {
+  onClose: () => void;
+};
+
+const NewMember: React.FC<NewMemberProps> = ({ onClose }) =>{
   const [isOpen, setIsOpen] = useState(false);
 
   const [error, setError] = useState(null);
@@ -22,6 +26,7 @@ const NewMember = () =>{
 
   const closeModel = () =>{
     setIsOpen(false);
+    onClose();
   }
 
   const openModel = () =>{
@@ -32,10 +37,10 @@ const NewMember = () =>{
     const {name , email, password} = data;
     const response = await addMember(dispatchMembers, {name, email, password});
     if (response.ok) {
-      console.log("Member added successfully:");
-      setIsOpen(false);
+      console.log("Member added successfully");
+      closeModel();
     } else {
-      console.log("Error adding member (in new MewMember):", response.errors);
+      console.log("Error adding member:", response.errors);
       setError(response.errors);
     }
   }
