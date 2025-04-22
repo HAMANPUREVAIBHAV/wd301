@@ -10,7 +10,7 @@ const Notfound = () => {
       <button
         id="backToHomeButton"
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800"
-        onClick={() => navigate("/home")}
+        onClick={() => navigate("/account")}
       >
         Back to Home
       </button>

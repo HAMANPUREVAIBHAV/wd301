@@ -27,7 +27,7 @@ const SigninForm: React.FC = () => {
       const data = await response.json();
       localStorage.setItem('authToken', data.token);
       localStorage.setItem('userData', JSON.stringify(data.user));
-      navigate("/dashboard"); // Redirect to the dashboard page after successful sign-in
+      navigate("/account"); // Redirect to the dashboard page after successful sign-in
 
     } catch (error) {
       console.error('Sign-in failed:', error);
