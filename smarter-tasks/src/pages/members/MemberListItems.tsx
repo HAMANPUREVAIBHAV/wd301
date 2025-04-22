@@ -26,7 +26,7 @@ const MemberListItems: React.FC = () => {
         return (
           <div
             key={member.id}
-            className="flex items-center justify-between bg-white dark:bg-gray-800 text-black dark:text-white rounded-xl shadow-sm p-5 mb-4 transition hover:shadow-lg"
+            className="member flex items-center justify-between bg-white dark:bg-gray-800 text-black dark:text-white rounded-xl shadow-sm p-5 mb-4 transition hover:shadow-lg"
           >
             <div>
               <h5 className="text-xl font-semibold">{member.name}</h5>
