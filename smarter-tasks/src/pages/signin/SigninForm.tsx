@@ -29,7 +29,7 @@ const SigninForm: React.FC = () => {
       const responseData = await response.json();
       localStorage.setItem('authToken', responseData.token);
       localStorage.setItem('userData', JSON.stringify(responseData.user));
-      navigate("/account"); // Redirect to the dashboard page after successful sign-in
+      navigate("/account/projects"); // Redirect to the dashboard page after successful sign-in
 
     } catch (error) {
       console.error('Sign-in failed:', error);
@@ -41,6 +41,7 @@ const SigninForm: React.FC = () => {
       <div>
         <label className="block text-gray-700 font-semibold mb-2">Email:</label>
         <input
+        id="email"
           type="email"
           {...register("email", { required: "Email is required" })}
           className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"
@@ -50,6 +51,7 @@ const SigninForm: React.FC = () => {
       <div>
         <label className="block text-gray-700 font-semibold mb-2">Password:</label>
         <input
+        id="password"
           type="password"
           {...register("password", { required: "Password is required" })}
           className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"

@@ -46,6 +46,7 @@ const SignupForm: React.FC = () => {
       <div>
         <label className="block text-gray-700 font-semibold mb-2">Organisation Name:</label>
         <input
+        id="organisationName"
           type="text"
           {...register("organisationName", { required: "Organisation Name is required" })}
           className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"
@@ -55,6 +56,7 @@ const SignupForm: React.FC = () => {
       <div>
         <label className="block text-gray-700 font-semibold mb-2">Your Name:</label>
         <input
+        id="userName"
           type="text"
           {...register("userName", { required: "Your Name is required" })}
           className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"
@@ -64,6 +66,7 @@ const SignupForm: React.FC = () => {
       <div>
         <label className="block text-gray-700 font-semibold mb-2">Email:</label>
         <input
+        id="userEmail"
           type="email"
           {...register("userEmail", { required: "Email is required" })}
           className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"
@@ -73,6 +76,7 @@ const SignupForm: React.FC = () => {
       <div>
         <label className="block text-gray-700 font-semibold mb-2">Password:</label>
         <input
+        id="userPassword"
           type="password"
           {...register("userPassword", { required: "Password is required" })}
           className="w-full border rounded-md py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-500 focus:shadow-outline-blue"
