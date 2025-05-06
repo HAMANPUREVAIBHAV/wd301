@@ -2,7 +2,7 @@ import React from "react";
 import { createBrowserRouter, Navigate } from "react-router-dom";
 
 import AccountLayout from "../layouts/account"
-import ProtectedRoutes from "./ProtectedRoutes"
+import ProtectedRoute from "./ProtectedRoute"
 import Notfound from "../pages/Notfound";
 import ProjectContainer from "../pages/projects/ProjectContainer";
 
@@ -40,9 +40,9 @@ const router = createBrowserRouter([
   {
     path: "account",
     element: (
-      <ProtectedRoutes>
+      <ProtectedRoute>
         <AccountLayout />
-      </ProtectedRoutes>
+      </ProtectedRoute>
     ),
     ErrorBoundary: () => <>Failed to load the page</>,
     children: [

@@ -1,6 +1,6 @@
 import { Navigate, useLocation } from "react-router-dom";
 
-export default function ProtectedRoutes({ children }: { children: JSX.Element }) {
+export default function ProtectedRoute({ children }: { children: JSX.Element }) {
   const { pathname } = useLocation()
 
   const authenticated = !!localStorage.getItem("authToken");
